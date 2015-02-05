@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sk4-JL-cLb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1S4-BH-6wO">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1S4-BH-6wO">
+                                <rect key="frame" x="16" y="492" width="568" height="44"/>
                                 <items>
                                     <barButtonItem title="&lt;" id="Jsa-1l-G9L">
                                         <connections>
@@ -38,8 +39,19 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vMO-u9-SuL">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vMO-u9-SuL" secondAttribute="trailing" constant="-20" id="5mM-fy-uou"/>
+                            <constraint firstItem="vMO-u9-SuL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6hp-ho-kfp"/>
+                            <constraint firstItem="vMO-u9-SuL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="amg-tz-hUL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1S4-BH-6wO" secondAttribute="bottom" id="qfh-wG-AvM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1S4-BH-6wO" secondAttribute="trailing" id="uPe-RD-6aG"/>
+                            <constraint firstItem="1S4-BH-6wO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v7B-2k-ot1"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="VLX-01-foH">
@@ -48,8 +60,8 @@
                             <rect key="frame" x="16" y="6" width="568" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PXq-TZ-wsz">
-                                    <rect key="frame" x="102" y="0.0" width="365" height="33"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PXq-TZ-wsz">
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="33"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go"/>
                                     <connections>
@@ -58,6 +70,12 @@
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="PXq-TZ-wsz" firstAttribute="leading" secondItem="HhP-68-DZN" secondAttribute="leading" id="A5U-Tk-VSL"/>
+                                <constraint firstAttribute="trailing" secondItem="PXq-TZ-wsz" secondAttribute="trailing" id="ShV-wl-M96"/>
+                                <constraint firstItem="PXq-TZ-wsz" firstAttribute="top" secondItem="HhP-68-DZN" secondAttribute="top" id="Tbe-HR-jsf"/>
+                                <constraint firstAttribute="bottom" secondItem="PXq-TZ-wsz" secondAttribute="bottom" id="oM8-Zi-Dsb"/>
+                            </constraints>
                         </view>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -65,6 +83,7 @@
                         <outlet property="backBtn" destination="Jsa-1l-G9L" id="De4-kh-mM2"/>
                         <outlet property="barView" destination="HhP-68-DZN" id="SHa-mt-eAb"/>
                         <outlet property="forwardBtn" destination="mOk-g2-hJr" id="lzg-BX-NXM"/>
+                        <outlet property="progressView" destination="vMO-u9-SuL" id="tjq-sG-RoC"/>
                         <outlet property="reloadBtn" destination="b0F-Xu-w3K" id="Xqm-xH-9SU"/>
                         <outlet property="urlField" destination="PXq-TZ-wsz" id="3g4-k3-2qC"/>
                     </connections>

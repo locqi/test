@@ -407,6 +407,7 @@
 				04246FCF1A80AC350075A2C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04246FD01A80AC350075A2C5 /* Build configuration list for PBXNativeTarget "WebKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				04246FD21A80AC350075A2C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
